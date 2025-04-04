@@ -40,4 +40,13 @@ $ sudo apt update && sudo apt upgrade -y
 $ sudo apt install build-essential -y
 $ sudo apt install cmake -y
 $ sudo apt install gdb -y
+
+# At Coder 練習問題用
+## A01
+```
+問題文
+整数 N が与えられるので、一辺の長さが N であるような正方形の面積を出力するプログラムを作成してください。
+
+制約
+N は 1 以上 100 以下の整数
 ```
