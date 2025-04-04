@@ -41,7 +41,7 @@ $ sudo apt install build-essential -y
 $ sudo apt install cmake -y
 $ sudo apt install gdb -y
 
-# At Coder 練習問題用
+# At Coder 練習問題
 ## A01
 ```
 問題文
