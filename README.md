@@ -39,4 +39,5 @@ A1 A2 ⋯ AN
 $ sudo apt update && sudo apt upgrade -y
 $ sudo apt install build-essential -y
 $ sudo apt install cmake -y
+$ sudo apt install gdb -y
 ```
