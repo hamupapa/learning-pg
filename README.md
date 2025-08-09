@@ -3,14 +3,9 @@
 
 # 環境
 OS：Ubuntu24.04(WSL2)
-
-# CMakeの勉強
-* Ubuntu24.04(WSL2)にインストールされていたCMakeをそのまま使用
+## WSL環境構築手順
 ```
-cmake --version
-cmake version 3.28.3
-
-CMake suite maintained and supported by Kitware (kitware.com/cmake).
+> wsl --install
 ```
 
 # At Coder 練習問題
@@ -40,4 +35,8 @@ A1 A2 ⋯ AN
  
 出力
 整数 X が含まれるとき Yes、含まれないとき No と出力してください。
+```
+$ sudo apt update && sudo apt upgrade -y
+$ sudo apt install build-essential -y
+$ sudo apt install cmake -y
 ```
