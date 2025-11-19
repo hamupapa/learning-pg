@@ -50,3 +50,11 @@ $ sudo apt install gdb -y
 制約
 N は 1 以上 100 以下の整数
 ```
+> wsl --install
+```
+```
+$ sudo apt update && sudo apt upgrade -y
+$ sudo apt install build-essential -y
+$ sudo apt install cmake -y
+$ sudo apt install gdb -y
+```
