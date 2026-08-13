@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天気予報</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f7ff;
+        color: #222;
+        margin: 0;
+        padding: 40px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+      h1 {
+        margin-top: 0;
+      }
+      form {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 16px;
+        background: #eef6ff;
+        border-radius: 8px;
+      }
+      .error {
+        color: #b91c1c;
+        background: #fee2e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>天気予報</h1>
+
+      <form method="post">
+        <input type="text" name="city" placeholder="都市名を入力" value="{{ city }}" />
+        <button type="submit">検索</button>
+      </form>
+
+      {% if weather_info %}
+        {% if weather_info.error %}
+          <div class="result error">
+            {{ weather_info.error }}
+          </div>
+        {% else %}
+          <div class="result">
+            <h2>{{ weather_info.city }}</h2>
+            <p>天気: {{ weather_info.weather }}</p>
+            <p>気温: {{ weather_info.temperature }}°C</p>
+            <p>湿度: {{ weather_info.humidity }}%</p>
+            <p>風速: {{ weather_info.wind_speed }} km/h</p>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </body>
+</html>
