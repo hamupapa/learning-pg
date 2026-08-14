@@ -214,7 +214,7 @@ class TestGetWeatherByCity:
         result = get_weather_by_city('東京')
         
         assert 'error' in result
-        assert 'API へのアクセスに失敗' in result['error']
+        assert '天気APIへのアクセスに失敗しました' in result['error']
     
     @patch('service.weather.requests.get')
     def test_get_weather_api_connection_error(self, mock_get):
@@ -224,7 +224,7 @@ class TestGetWeatherByCity:
         result = get_weather_by_city('東京')
         
         assert 'error' in result
-        assert 'API へのアクセスに失敗' in result['error']
+        assert '天気APIへのアクセスに失敗しました' in result['error']
     
     @patch('service.weather.requests.get')
     def test_get_weather_api_http_error(self, mock_get):
@@ -236,7 +236,7 @@ class TestGetWeatherByCity:
         result = get_weather_by_city('東京')
         
         assert 'error' in result
-        assert 'API へのアクセスに失敗' in result['error']
+        assert '天気APIへのアクセスに失敗しました' in result['error']
     
     # 異常系テスト - 不正なレスポンス
     @patch('service.weather.requests.get')
